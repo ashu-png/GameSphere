@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+hr {
+  margin: 40px 0;
+  border: none;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.grid:not(.tic) {
+  grid-template-columns: repeat(4, 90px);
+}
+
+.tic {
+  grid-template-columns: repeat(3, 100px);
+}
+
+/* MEMORY CARD */
+.card {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card.flipped {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/* TIC TAC TOE CELLS */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* BUTTON */
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+.winner-cell {
+  background: linear-gradient(135deg, #00f260, #0575e6) !important;
+  color: white;
+  animation: glow 1s infinite alternate;
+  transform: scale(1.1);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00f260;
+  }
+  to {
+    box-shadow: 0 0 25px #0575e6;
+  }
+}
+.cell.win {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: white;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.6);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(0, 255, 200, 1);
+  }
+}
