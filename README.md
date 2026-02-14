@@ -1,0 +1,2 @@
+# GameSphere
+PlayLogic AI is a modern React + TypeScript game application featuring an AI-driven Tic Tac Toe with Minimax algorithm and a Kids Memory Game. Includes difficulty levels, real-time scoreboard, win detection highlighting, and responsive UI design.
